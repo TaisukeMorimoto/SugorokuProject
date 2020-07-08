@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.container {
+	text-align: center;
+}
+
+.titleName {
+	font-size: 30pt;
+	font-weight: bold;
+}
+
+.message {
+	font-size: 20pt;
+}
+
+.button {
+	text-align: left;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.main {
+	border-style: solid;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+td {
+	border-style: solid;
+	border-color: black;
+	font-size: 20pt;
+	height: 80px;
+	width: 80px;
+	color: red;
+}
