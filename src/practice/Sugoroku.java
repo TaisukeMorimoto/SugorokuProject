@@ -30,15 +30,12 @@ public class Sugoroku extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		HttpSession session = request.getSession(true);
-		SugorokuBean bean = (SugorokuBean) session.getAttribute("sugorokuBean");
+		SugorokuBean bean = (SugorokuBean) session.getAttribute("sugorokubean");
 		if (bean == null) {
 			// 初回時の処理(Data処理クラスのオブジェクトを生成し、セッションデータとして格納する)
 			bean = new SugorokuBean();
-			session.setAttribute("sugorokuBean", bean);
+			session.setAttribute("sugorokubean", bean);
 		}
-
-		System.out.println("count" + bean.getCount());
-		System.out.println("location" + bean.getLocation());
 
 		int num;
 		try {
@@ -46,13 +43,6 @@ public class Sugoroku extends HttpServlet {
 		} catch (NumberFormatException ne) {
 			num = 0;
 		}
-
-		if (bean.getLocation() == bean.getSQUARE() - 1) {
-			System.out.println("終わるときのlocation" + bean.getLocation());
-			num = 3;
-		}
-
-		System.out.println("num" + num);
 
 		/**
 		 * num = 0: 初回起動時
@@ -63,6 +53,7 @@ public class Sugoroku extends HttpServlet {
 		 */
 		String nextPage;
 		if (num == 0) {
+			bean.initial();
 			nextPage = "/SugorokuBeanRe.jsp";
 		} else if (num == 1) {
 			nextPage = "/SugorokuBeanRe.jsp";

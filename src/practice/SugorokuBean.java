@@ -5,7 +5,7 @@ import java.util.Random;
 public class SugorokuBean {
 
 	private static final int DICE_MAX = 6;
-	private static final int SQUARE = 10;
+	private static final int SQUARE = 10 + 1;
 	private boolean[] buf = new boolean[SQUARE];
 	private int location = 0;
 	private int count = 0;
@@ -21,9 +21,6 @@ public class SugorokuBean {
 		location = 0;
 		count = 0;
 		dice = 0;
-
-		System.out.println("location in initial " + location);
-
 	}
 
 	public int rollDice() {

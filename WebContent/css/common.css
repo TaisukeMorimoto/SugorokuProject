@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 .container {
+	margin: 15px;
+	padding: 20px;
 	text-align: center;
 }
 
@@ -10,26 +12,67 @@
 }
 
 .message {
-	font-size: 20pt;
+	font-size: 25pt;
+}
+
+.large-message {
+	font-size: 25pt;
+	font-weight: bold;
+}
+
+.large-message {
+	font-size: 15pt;
 }
 
 .button {
-	text-align: left;
-	font-size: 20pt;
+	left:10px;
+	font-size: 25pt;
 	font-weight: bold;
 }
 
 .main {
-	border-style: solid;
+	border: 1px solid black;
 	margin-right:auto;
 	margin-left:auto;
+}
+
+.main {
+	border: 0px none;
+	margin-right:auto;
+	margin-left:auto;
+	align: center;
+}
+
+.noborder {
+
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.footer {
+	margin-right:auto;
+	margin-left:auto;
+	text-align: center;
+	font-size: 15pt;
 }
 
 td {
 	border-style: solid;
 	border-color: black;
 	font-size: 20pt;
-	height: 80px;
-	width: 80px;
+	height: 100px;
+	width: 100px;
 	color: red;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+th{
+	border: 0px none;
+	font-size: 15pt;
+	height: 100px;
+	width: 100px;
+	color: black;
+	margin-right:auto;
+	margin-left:auto;
 }
