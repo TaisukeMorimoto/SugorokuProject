@@ -11,8 +11,9 @@
 
 	<!-- ヘッダ -->
 	<div class="header">
-	<h1><img src="images/dice.jpg" alt="すごろく">4シスすごろく<img src="images/dice.jpg" alt="すごろく"></h1>
+	<h2><img src="images/title3.PNG" alt="すごろく"></h2>
 	</div>
+
 
  <div class="container">
  	<br>
@@ -20,7 +21,7 @@
  	</div>
  	<br>
  	<br>
- 	<div class="button">
+ 	<div class="large-button">
  	<%
  		if (sugorokubean.getLocation() == sugorokubean.getSQUARE() - 1){
  			out.println("<a href='Sugoroku?number=3'>進む</a><br>");

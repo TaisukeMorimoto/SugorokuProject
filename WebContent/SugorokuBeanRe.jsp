@@ -11,22 +11,59 @@
 
 	<!-- ヘッダ -->
 	<div class="header">
-	<h1><img src="images/dice.jpg" alt="すごろく">4シスすごろく<img src="images/dice.jpg" alt="すごろく"></h1>
+	<h2><img src="images/title3.PNG" alt="すごろく"></h2>
 	</div>
+
+  <div class="boxA">
+    <div class="box1"><p style="font-weight: bold">操作</p>
+    	<br>
+    	<div class="txt">
+     	<div class="large-button">
+ 			<a href="Sugoroku?number=2">・サイコロを振る</a>
+ 		</div>
+ 		<br>
+ 		<div class="button">
+ 			<a href="Sugoroku?number=4">・最初から</a>
+ 		</div>
+ 		</div>
+
+
+    </div>
+    <div class="box2">
+    	<p style="font-weight: bold">ステータス</p>
+    	<br>
+    	<div class="txt">
+    	<div class="message">
+    		進捗： <%=sugorokubean.getLocation() %>/<%=sugorokubean.getSQUARE()-1 %>
+    		<br>
+    		<br>
+ 			回数： <%=sugorokubean.getCount()+1%>
+ 		</div>
+ 		</div>
+ 		<br>
+
+    </div>
+    <div class="box3">
+    	<p style="font-weight: bold">今の状態</p>
+    	<img src="images/drunk.jpg" alt="酔っ払い" width="50%" height="50%">
+ 		<br>
+
+
+    </div>
+  </div>
+  <br>
 
  <div class="container">
  	<br>
- 	<div class="message">サイコロを振ってね。</div>
-
  	<table class="main">
  		<tbody>
  		 	<tr>
  				<%
-					out.println("<tr><th>スタート</th>");
+					out.println("<tr><th>Start</th>");
  					for (int i = 0; i <= sugorokubean.getSQUARE()-3; i++) {
 						out.println("<th></th>");
  					}
- 					out.println("<th>ゴール</th></tr>");
+ 					out.println("<th>Goal</th></tr>");
  				%>
  			</tr>
  			<tr>
@@ -51,22 +88,18 @@
  		</tbody>
  	</table>
  	<br>
- 	<div class="message"><%=sugorokubean.getLocation() %>/<%=sugorokubean.getSQUARE()-1 %>マス目
- 	　　　<%=sugorokubean.getCount()+1%>回目
- 	</div>
+
  	<br>
  	<br>
- 	<div class="large-button">
- 	<a href="Sugoroku?number=2">サイコロを振る</a></div>
+
  	<br>
  	<br>
- 	<div class="button">
- 	<a href="Sugoroku?number=4">最初から</a></div>
+
  	<hr>
   </div>
    	<% session.setAttribute("sugorokubean", sugorokubean); %>
 </body>
 <footer>
- 	  <div class="footer">作成者：4シス事2020</div>
+ 	  <div class="footer">made by T.morimoto, S.doumoto and R.miyashita</div>
 </footer>
 </html>
