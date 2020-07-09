@@ -8,6 +8,12 @@
 <title>すごろく</title>
 </head>
 <body>
+
+	<!-- ヘッダ -->
+	<div class="header">
+	<h1><img src="images/dice.jpg" alt="すごろく">4シスすごろく<img src="images/dice.jpg" alt="すごろく"></h1>
+	</div>
+
  <div class="container">
  	<br>
  	<div class="large-message"><%=sugorokubean.rollDice() %>がでました。

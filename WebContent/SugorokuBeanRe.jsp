@@ -10,13 +10,11 @@
 <body>
 
 	<!-- ヘッダ -->
-	<div id="header">
-	<h1><img src="images/logo.png" alt="すごろく"></h1>
+	<div class="header">
+	<h1><img src="images/dice.jpg" alt="すごろく">4シスすごろく<img src="images/dice.jpg" alt="すごろく"></h1>
 	</div>
 
  <div class="container">
- 	<div class="titleName">すごろく</div>
- 	<br>
  	<br>
  	<div class="message">サイコロを振ってね。</div>
 
@@ -53,18 +51,17 @@
  		</tbody>
  	</table>
  	<br>
- 	<div class="message"><%=sugorokubean.getLocation() %>/<%=sugorokubean.getSQUARE()-1 %>マス目</div>
- 	<br>
- 	<div class="message"><%=sugorokubean.getCount()%>回目
+ 	<div class="message"><%=sugorokubean.getLocation() %>/<%=sugorokubean.getSQUARE()-1 %>マス目
+ 	　　　<%=sugorokubean.getCount()+1%>回目
  	</div>
  	<br>
  	<br>
- 	<div class="button">
+ 	<div class="large-button">
  	<a href="Sugoroku?number=2">サイコロを振る</a></div>
  	<br>
  	<br>
  	<div class="button">
- 	<a href="Sugoroku?number=4">最初からやる</a></div>
+ 	<a href="Sugoroku?number=4">最初から</a></div>
  	<hr>
   </div>
    	<% session.setAttribute("sugorokubean", sugorokubean); %>

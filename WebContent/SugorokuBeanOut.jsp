@@ -8,11 +8,18 @@
 <title>すごろく</title>
 </head>
 <body>
+
+	<!-- ヘッダ -->
+	<div class="header">
+	<h1><img src="images/dice.jpg" alt="すごろく">4シスすごろく<img src="images/dice.jpg" alt="すごろく"></h1>
+	</div>
+
  <div class="container">
  	<br>
- 	<div class="message"><%=sugorokubean.getCount()%>回目でゴール！
+ 	<div class="large-message"><%=sugorokubean.getCount()%>回目でゴール！
  	</div>
  	<br>
+ 	<a><img src="images/congratulation.png" alt="おめでとう"></a>
  	<br>
  	<hr>
  	<div class="button">

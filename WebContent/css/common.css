@@ -6,9 +6,10 @@
 	text-align: center;
 }
 
-.titleName {
+.header {
+	text-align: center;
 	font-size: 30pt;
-	font-weight: bold;
+
 }
 
 .message {
@@ -16,17 +17,26 @@
 }
 
 .large-message {
-	font-size: 25pt;
+	font-size: 40pt;
 	font-weight: bold;
 }
 
-.large-message {
+.small-message {
 	font-size: 15pt;
 }
 
 .button {
-	left:10px;
 	font-size: 25pt;
+	font-weight: bold;
+}
+
+.large-button {
+	font-size: 35pt;
+	font-weight: bold;
+}
+
+.small-button {
+	font-size: 20pt;
 	font-weight: bold;
 }
 
@@ -53,7 +63,7 @@
 	margin-right:auto;
 	margin-left:auto;
 	text-align: center;
-	font-size: 15pt;
+	font-size: 20pt;
 }
 
 td {
