@@ -38,6 +38,9 @@
     		<br>
     		<br>
  			回数： <%=sugorokubean.getCount()%>
+ 			<br>
+    		<br>
+ 			血中アルコール濃度： <%=sugorokubean.getBloodAlcLv()%>
  		</div>
  		</div>
  		<br>
@@ -45,8 +48,18 @@
     </div>
     <div class="box3">
     	<p style="font-weight: bold">今の状態</p>
-    	<img src="images/drunk.jpg" alt="酔っ払い" width="50%" height="50%">
- 		<br>
+    	<br>
+	 	<%
+	 		if (sugorokubean.getBloodAlcLv() < 5){
+	 			out.println("<img src='images/0-5.jpg' alt='元気' width='30%' height='30%'>");
+	 		} else if ((sugorokubean.getBloodAlcLv() >= 5) && (sugorokubean.getBloodAlcLv() < 10)) {
+	 			out.println("<img src='images/5-10.png' alt='やや酔っ払い' width='40%' height='40%'>");
+	 		} else if ((sugorokubean.getBloodAlcLv() >= 10) && (sugorokubean.getBloodAlcLv() < 15)) {
+	 			out.println("<img src='images/10-15.jpg' alt='酔っ払い' width='40%' height='40%'>");
+	 		} else if ((sugorokubean.getBloodAlcLv() >= 15) && (sugorokubean.getBloodAlcLv() < 20)) {
+	 			out.println("<img src='images/15-20.jpg' alt='やばい酔っ払い' width='40%' height='40%'>");
+	 		}
+	 	%>
 
 
     </div>

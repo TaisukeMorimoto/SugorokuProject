@@ -21,6 +21,17 @@
  	</div>
  	<br>
  	<br>
+ 	<br>
+ 	<div class="message">
+ 	<div class="txt">
+	<%=sugorokubean.getDrinkText()%>
+	<br>
+	<%=sugorokubean.getAlcoholLvText() %>
+	<br>
+	現在の血中アルコール濃度は<%= sugorokubean.alcIntake() %>です。
+ 	</div>
+ 	</div>
+ 	<br>
  	<div class="large-button">
  	<%
  		if (sugorokubean.getLocation() == sugorokubean.getSQUARE() - 1){

@@ -34,6 +34,7 @@ public class Sugoroku extends HttpServlet {
 		if (bean == null) {
 			// 初回時の処理(Data処理クラスのオブジェクトを生成し、セッションデータとして格納する)
 			bean = new SugorokuBean();
+			bean.initial();
 			session.setAttribute("sugorokubean", bean);
 		}
 
@@ -54,6 +55,7 @@ public class Sugoroku extends HttpServlet {
 		String nextPage;
 		if (num == 0) {
 			bean.initial();
+			session.setAttribute("sugorokubean", bean);
 			nextPage = "/SugorokuBeanRe.jsp";
 		} else if (num == 1) {
 			nextPage = "/SugorokuBeanRe.jsp";
@@ -63,6 +65,7 @@ public class Sugoroku extends HttpServlet {
 			nextPage = "/SugorokuBeanOut.jsp";
 		} else {
 			bean.initial();
+			session.setAttribute("sugorokubean", bean);
 			nextPage = "/SugorokuBeanRe.jsp";
 		}
 

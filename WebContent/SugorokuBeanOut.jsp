@@ -20,6 +20,9 @@
  	<div class="large-message"><%=sugorokubean.getCount()%>回目でゴール！
  	</div>
  	<br>
+ 	<div class="large-message">血中アルコール濃度は<%=sugorokubean.getBloodAlcLv()%>でした。
+ 	</div>
+ 	<br>
  	<a><img src="images/congratulation.png" alt="おめでとう"></a>
  	<br>
  	<hr>
