@@ -23,11 +23,15 @@
 
  <div class="container">
  	<br>
- 	<a><img src="images/gameover.jpg" alt="gameover"></a>
- 	<br>
- 	<div class="large-message">血中アルコール濃度は<%=sugorokubean.getBloodAlcLv()%>です。致死量。
+ 	<div class="large-message"><%=sugorokubean.getCount()%>回目でゴール！
  	</div>
  	<br>
+ 	<div class="message">
+ 	飲み会から生き残った。この経験があればもうどんな飲み会も怖くない。<br>
+ 	血中アルコール濃度は<%=sugorokubean.getBloodAlcLv()%>でした。
+ 	</div>
+ 	<br>
+ 	<a><img src="images/gameclear.png" alt="gameclear"  width='30%' height='30%'></a>
  	<br>
  	<hr>
  	<div class="button">
