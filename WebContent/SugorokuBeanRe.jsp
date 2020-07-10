@@ -37,7 +37,7 @@
     		進捗： <%=sugorokubean.getLocation() %>/<%=sugorokubean.getSQUARE()-1 %>
     		<br>
     		<br>
- 			回数： <%=sugorokubean.getCount()+1%>
+ 			回数： <%=sugorokubean.getCount()%>
  		</div>
  		</div>
  		<br>
