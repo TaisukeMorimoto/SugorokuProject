@@ -8,7 +8,7 @@ public class SugorokuBean {
 	private static final int SQUARE = 25 + 1;
 	private boolean[] buf = new boolean[SQUARE];
 	private int[] event = new int[SQUARE];
-	private int[] alcohol = new int[] {5, 3, 2, -2, -5};
+	private int[] alcohol = new int[] {10, 8, 4, 3, 3, -1, -2};
 	private int location = 0;
 	private int count = 0;
 	private int bloodAlcLv = 0;
@@ -47,7 +47,6 @@ public class SugorokuBean {
 		// bufの新しいマスをtrueにする
 		buf[location] = true;
 		count++;
-		System.out.println("count in rollDice" + count);
 		return dice;
 	}
 
@@ -64,8 +63,6 @@ public class SugorokuBean {
 		if(bloodAlcLv < 0) {
 			bloodAlcLv = 0;
 		}
-		System.out.println("event[location] in alcIntake" + event[location]);
-		System.out.println("bloodAlcLv in alcIntake" + bloodAlcLv);
 		return bloodAlcLv;
 	}
 
@@ -75,19 +72,22 @@ public class SugorokuBean {
 
 		String text = null;
 		if(event[location] == alcohol[0]) {
-			text = "みんなで日本酒４合空けるぞ～～";
+			text = "テキーラをボトルで頼んだやつがいる。";
 		}else if(event[location] == alcohol[1]){
+			text = "みんなで日本酒４合空けるぞ～～";
+		}else if(event[location] == alcohol[2]){
 			text = "とりあえず、ビールで乾杯！";
-		}else if(event[location] == alcohol[2]) {
-			text = "あ、カシスオレンジください。。。";
 		}else if(event[location] == alcohol[3]) {
-			text = "チェイサー？いや、これ焼酎の水割りだよ";
+			text = "あ、カシスオレンジください。。。";
 		}else if(event[location] == alcohol[4]) {
+			text = "チェイサー？いや、これ焼酎の水割りだよ";
+		}else if(event[location] == alcohol[5]) {
 			text = "実は飲み会前にウコンの力を飲んでいたのさ";
+		}else if(event[location] == alcohol[6]) {
+			text = "店員さん、お冷3つください！";
 		}else {
 			text = null;
 		}
-		System.out.println("text in getDrink: " + text);
 		return text;
 	}
 
@@ -96,11 +96,10 @@ public class SugorokuBean {
 
 		String text = null;
 		if(event[location] > 0) {
-			text = "血中アルコール濃度は" + event[location] + "上昇した";
+			text = "血中アルコール濃度は" + event[location] + "上昇した。";
 		}else if(event[location] < 0) {
-			text = "血中アルコール濃度は" + Math.abs(event[location]) + "回復した";
+			text = "血中アルコール濃度は" + Math.abs(event[location]) + "回復した。";
 		}
-		System.out.println("text in getAlcoholLv: " + text);
 		return text;
 	}
 

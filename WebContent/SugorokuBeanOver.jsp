@@ -23,33 +23,17 @@
 
  <div class="container">
  	<br>
- 	<div class="large-message" style="text-align: center"><%=sugorokubean.rollDice() %>がでました。
+ 	<a><img src="images/gameover.jpg" alt="gameover"></a>
+ 	<br>
+ 	<div class="large-message">血中アルコール濃度は<%=sugorokubean.getBloodAlcLv()%>です。致死量。
  	</div>
  	<br>
  	<br>
- 	<br>
- 	<div class="message">
- 	<div class="txt">
-	<%=sugorokubean.getDrinkText()%>
-	<br>
-	<%=sugorokubean.getAlcoholLvText() %>
-	<br>
-	現在の血中アルコール濃度は<%= sugorokubean.alcIntake() %>です。
- 	</div>
- 	</div>
- 	<br>
- 	<div class="large-button" style="text-align: center">
- 	<%
- 		if (sugorokubean.getLocation() == sugorokubean.getSQUARE() - 1){
- 			out.println("<a href='Sugoroku?number=3'>進む</a><br>");
- 		} else if (sugorokubean.getBloodAlcLv() >= 20) {
- 			out.println("<a href='Sugoroku?number=5'>進む</a><br>");
- 		} else {
- 			out.println("<a href='Sugoroku?number=1'>進む</a><br>");
- 		}
- 	%>
+ 	<hr>
+ 	<div class="button">
+ 	<a href="Sugoroku?number=4">再チャレンジ</a><br>
+ 	<% session.setAttribute("sugorokubean", sugorokubean); %>
  	</div>
  </div>
- <% session.setAttribute("sugorokubean", sugorokubean); %>
 </body>
 </html>

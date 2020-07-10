@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
-.container {
-	margin: 3px;
-	padding: 5px;
-	text-align: center;
-}
+
 
 .header {
 	text-align: center;
@@ -92,8 +88,8 @@ th{
 }
 
 .txt {
-	display: inline-block;
-	text-align: left;
+
+	text-align: center;
 }
 
 .line-height {

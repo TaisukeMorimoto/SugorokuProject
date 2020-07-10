@@ -51,11 +51,12 @@ public class Sugoroku extends HttpServlet {
 		 * num = 2: サイコロの数表示
 		 * num = 3: ゴール
 		 * num = 4: 最初から始める
+		 * num = 5: ゲームオーバー
 		 */
 		String nextPage;
 		if (num == 0) {
 			bean.initial();
-			session.setAttribute("sugorokubean", bean);
+			System.out.println("buf[0] in sugoroku.java" + bean.getBuf(0));
 			nextPage = "/SugorokuBeanRe.jsp";
 		} else if (num == 1) {
 			nextPage = "/SugorokuBeanRe.jsp";
@@ -63,10 +64,12 @@ public class Sugoroku extends HttpServlet {
 			nextPage = "/SugorokuBeanNum.jsp";
 		} else if (num == 3) {
 			nextPage = "/SugorokuBeanOut.jsp";
-		} else {
+		} else if (num == 4) {
 			bean.initial();
 			session.setAttribute("sugorokubean", bean);
 			nextPage = "/SugorokuBeanRe.jsp";
+		} else {
+			nextPage = "/SugorokuBeanOver.jsp";
 		}
 
 		RequestDispatcher rd = getServletContext().getRequestDispatcher(nextPage);
